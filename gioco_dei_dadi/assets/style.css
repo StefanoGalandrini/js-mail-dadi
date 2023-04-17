@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 500;
+	color: white;
+	background-color: #444444;
+}
+
+main .bg-table {
+	max-width: 1600px;
+	height: 100%;
+	margin-inline: auto;
+	position: relative;
+}
+
+main img {
+	width: 100%;
+	object-fit: contain;
+	position: absolute;
+	inset: 0;
+	border-radius: 3rem;
+	z-index: -10;
+}
+
+main .table {
+	width: 40%;
+	margin-inline: auto;
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(120, 120, 120, 0.8);
+	border-radius: 20px;
+}
+
+main h1 {
+	text-transform: uppercase;
+	padding: 2rem;
+	font-size: 3rem;
+	letter-spacing: 3px;
+}
+
+main h2 {
+	text-transform: uppercase;
+	padding-bottom: 1rem;
+	font-size: 1.5rem;
+	letter-spacing: 2px;
+}
+
+main .dice-btn {
+	background-color: #aa0000;
+	color: white;
+	padding: 1rem 2rem;
+	margin: 3rem 0;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.2rem;
+	transition: all 300ms;
+}
+
+main .dice-btn:hover {
+	box-shadow: 0px 0px 5px white;
+	background-color: #dd0000;
+}
+
+main .container {
+	display: flex;
+	justify-content: center;
+}
+
+main .result {
+	background-color: rgba(120, 120, 120, 0.8);
+	text-align: center;
+	width: 50%;
+	font-size: 2rem;
+	margin: 4rem 0;
+	padding: 4rem;
+}
+
+main .ok {
+	border: 0.25rem dotted rgb(0, 250, 0);
+	color: white;
+}
+
+main .ko {
+	border: 0.25rem dotted #dd0000;
+	color: #660000;
+}
+
+main .meh {
+	border: 0.25rem dotted #d9dd00;
+	color: #412700;
+}
