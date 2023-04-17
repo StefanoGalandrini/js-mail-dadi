@@ -1,4 +1,4 @@
-let emailArray = [
+const emailArray = [
 	"bono@u2.com",
 	"the.edge@u2.com",
 	"adam.clayton@u2.com",
@@ -11,21 +11,23 @@ let emailArray = [
 ];
 
 document.querySelector(".btn-input").addEventListener("click", function () {
-	let userEmail = document.querySelector("#email").value;
-	document.getElementById(
-		"email-div",
-	).innerHTML = `L'email inserita è ${userEmail}`;
+	const userEmail = document.querySelector("#email").value;
+	let result = false;
 
-	for (i = 0; i < emailArray.length; i++) {
-		console.log(emailArray[i]);
+	for (let i = 0; i < emailArray.length; i++) {
+		console.log(i, emailArray[i]);
+
+		console.log(userEmail === emailArray[i]);
 		if (userEmail === emailArray[i]) {
-			document.querySelector(".result").innerHTML =
-				"Sei iscritto, puoi giocare!";
-		} else {
-			document.querySelector(".result").innerHTML =
-				"Non puoi giocare perché non sei iscritto!";
+			result = true;
 		}
 	}
-});
 
-console.log("L'email inserita è " + userEmail);
+	if (result) {
+		document.querySelector(".result").innerHTML =
+			"Sei iscritto, puoi giocare!";
+	} else {
+		document.querySelector(".result").innerHTML =
+			"Non puoi giocare perché non sei iscritto!";
+	}
+});
