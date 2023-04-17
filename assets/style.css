@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 500;
+	color: white;
+	background-color: #444444;
+}
+
+main {}
+
+main .bg-table {
+	max-width: 1600px;
+	height: 100%;
+	margin-inline: auto;
+	position: relative;
+}
+
+main img {
+	width: 100%;
+	object-fit: contain;
+	position: absolute;
+	inset: 0;
+	border-radius: 3rem;
+	z-index: -10;
+}
+
+main .table {
+	width: 40%;
+	margin-inline: auto;
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(120, 120, 120, 0.7);
+	border-radius: 20px;
+}
+
+main h1 {
+	text-transform: uppercase;
+	padding: 2rem;
+	font-size: 3rem;
+	letter-spacing: 3px;
+}
+
+main .user-email {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 70%;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.user-email label {
+	color: white;
+	font-size: 1.2rem;
+}
+
+.user-email input {
+	width: 100%;
+	padding: 1rem 1.5rem;
+	margin: 8px 0;
+	border: 3px solid white;
+	border-radius: 10px;
+	box-sizing: border-box;
+	font-size: 1.2rem;
+}
+
+.user-email .btn-input {
+	width: 50%;
+	background-color: #aa0000;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.2rem;
+	transition: all 300ms;
+}
+
+.email .user-email:hover {
+	box-shadow: 0px 0px 5px white;
+	background-color: #dd0000;
+}
+
+#email:invalid {
+	border: 5px solid red;
+}
