@@ -15,8 +15,6 @@
 	background-color: #444444;
 }
 
-main {}
-
 main .bg-table {
 	max-width: 1600px;
 	height: 100%;
@@ -40,7 +38,7 @@ main .table {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: rgba(120, 120, 120, 0.7);
+	background-color: rgba(120, 120, 120, 0.8);
 	border-radius: 20px;
 }
 
@@ -95,4 +93,28 @@ main .user-email {
 
 #email:invalid {
 	border: 5px solid red;
+}
+
+main .container {
+	display: flex;
+	justify-content: center;
+}
+
+main .result {
+	background-color: rgba(120, 120, 120, 0.8);
+	text-align: center;
+	width: 50%;
+	font-size: 2rem;
+	margin: 4rem 0;
+	padding: 4rem;
+}
+
+main .ok {
+	border: 0.25rem dotted rgb(0, 250, 0);
+	color: white;
+}
+
+main .ko {
+	border: 0.25rem dotted #dd0000;
+	color: #660000;
 }

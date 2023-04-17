@@ -10,24 +10,30 @@ const emailArray = [
 	"acrobat@achtungbaby.com",
 ];
 
+let resultDiv = document.createElement("div");
+resultDiv.innerHTML = "";
+resultDiv.classList.remove("result", "ok", "ko");
+
 document.querySelector(".btn-input").addEventListener("click", function () {
 	const userEmail = document.querySelector("#email").value;
 	let result = false;
 
+	// check if the user email is present in the Array
 	for (let i = 0; i < emailArray.length; i++) {
-		console.log(i, emailArray[i]);
-
-		console.log(userEmail === emailArray[i]);
 		if (userEmail === emailArray[i]) {
 			result = true;
 		}
 	}
 
+	const mainContainer = document.querySelector(".container");
+	mainContainer.appendChild(resultDiv);
+
+	// print the answer after checking
 	if (result) {
-		document.querySelector(".result").innerHTML =
-			"Sei iscritto, puoi giocare!";
+		resultDiv.innerHTML = "Sei iscritto, puoi giocare!";
+		resultDiv.classList.add("result", "ok");
 	} else {
-		document.querySelector(".result").innerHTML =
-			"Non puoi giocare perché non sei iscritto!";
+		resultDiv.innerHTML = "Non puoi giocare perché non sei iscritto!";
+		resultDiv.classList.add("result", "ko");
 	}
 });
